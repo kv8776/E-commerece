@@ -13,7 +13,7 @@ const Navbar = () => {
       
         <div className="brand">
           <FaShopify size={34}className="brand-icon" />
-          <span className="brand-text">Ganesh</span>
+          <span className="brand-text">Ganesh's</span>
         </div>
        <AiOutlineShoppingCart size={34}className="brand-icon" />
     </header>
