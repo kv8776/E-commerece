@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Electronics.css"
 import Product from '@/app/components/product/product'
-import { PRODUCTS } from '@/app/assests/fashion-info.js'
+import { PRODUCTS } from '@/app/assests/elecronics-info.js'
 const Electronics = () => {
   return (
     <div className="shop">

@@ -8,7 +8,7 @@ const Product = (props) => {
       <div className="description">
         <p><b>{productName}</b>
         </p>
-        <p><b>${price}</b>
+        <p><b> ₹{price}</b>
         </p>
        
         
