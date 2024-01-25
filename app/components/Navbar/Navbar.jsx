@@ -7,6 +7,8 @@ import './Navbar.css';
 import { Link } from 'react-router-dom';
 import Cart from '@/app/pages/cart/cart';
 import NoteContext from '@/app/NoteContext';
+import Index from '@/app/pages/index/Index';
+import Type from '../type/Type';
 
 const Navbar = () => {
   const { noteState } = useContext(NoteContext);
@@ -14,23 +16,32 @@ const Navbar = () => {
   return (
     <header className="flex-container">
       <div className="brand">
-        <FaShopify size={36} className="brand-icon" />
+
         <span className="brand-text">
-          GANESH<span className='inner-text'>.ECOM</span>
+          GanesH<span className='inner-text'>.ecoM</span>
         </span>
       </div>
+      <div className="items">
+        <Link to="/index" className="c">Home</Link>
+
+
+        <Link to="/type" className="c">Shop</Link>
+
+        <Link to="/grocery" className="c">New</Link>
+        <Link to="/grocery" className="c">Contact</Link>
+
+      </div>
+      <div className="cart-search">
       <div className="search">
         <label>
           <input type='text' placeholder='What can I find for you?' />
           <span className='inner-search'>Search</span>
         </label>
-      </div>
-      <Link to="cart" className="cart-link">
-        <AiOutlineShoppingCart size={36} className="brand-icon" />
-        {noteState.length > 0 && (
-          <div className="cart-count">{noteState.length}</div>
-        )}
-      </Link>
+        </div>
+        <Link to="cart" className="cart-link">
+          <AiOutlineShoppingCart size={36} className="brand-icon" />
+        </Link>
+        </div>
     </header>
   );
 };

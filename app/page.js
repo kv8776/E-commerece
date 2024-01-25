@@ -15,11 +15,11 @@ const Page = () => {
   return (
     <NoteProvider>
    
-      <BrowserRouter>
+      <BrowserRouter >
         <Navbar />
         <Type />
         <Routes>
-          <Route index element={<Index />} />
+          <Route path="/index"  element={<Index />} />
           <Route path="/fashion" element={<Fashion />} />
           <Route path="/grocery" element={<Grocery />} />
           <Route path="/electronics" element={<Electronics />} />

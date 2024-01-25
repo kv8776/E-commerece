@@ -1,22 +1,23 @@
-.container{
+.inner{
   display:flex;
-  background-color: black;
  
-  width:100%;
+ 
+  width:50%;
+  margin: auto;
   height:2.5rem;
   align-items: center;
   justify-content:space-around;
   box-sizing: border-box;
-  margin: 0 0 0 0;
+  
 }
 
 .click{
   text-decoration: none;
-  color: white;
+  color: rgb(0, 0, 0);
   display:flex;
-  font-size: .8rem; align-items: center;
+  font-size: 1.2rem; align-items: center;
   justify-content:space-around;
-
+  font-family: 'DM Sans', sans-serif;
   place-content: center;
   box-sizing: border-box;
 }
@@ -30,6 +31,20 @@
     flex-direction:column;
     flex-wrap: wrap;
     height: 2.8rem;
+  }
+
+  
+}
+@media screen  and (max-width:880px){
+  .inner{
+   width: 100%;
+  }
+
+  
+}
+@media screen  and (max-width:450px){
+  .click{
+   width:.5rem;
   }
 
   

@@ -9,6 +9,7 @@
     border:1px solid #ddd;
     border-radius: 0.5em;
     transition: 0.3s;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .card:hover {

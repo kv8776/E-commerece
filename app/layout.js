@@ -1,17 +1,15 @@
-import { Inter } from "next/font/google";
-import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] });
-
-
+import "./globals.css"; // Assuming this file contains additional styles
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" >
-    
-
-     
-      <body  className={inter.className}>{children}</body> 
+    <html lang="en">
+      <head>
+      <style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,500;1,9..40,1000&display=swap');
+</style>
+      </head>
+      <body >{children}</body>
     </html>
   );
 }
