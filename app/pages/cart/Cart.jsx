@@ -31,17 +31,25 @@ const Cart = () => {
           <>
             <ul>
               {noteState.map((item) => (
-                <li className='cart-card' key={item.id}>
+                <li className='cart-card' >
                   <img src={item.productImage} alt="image not found" />
                   <div className="price-info">{item.productName} - ₹{item.price}</div>
+                  <div className="counter-div">
+                  <button className='counter'>+</button>
+                  <h5> 12 </h5>
+                  <button className='counter'>-</button>
+                  </div>
                 </li>
               ))}
             </ul>
+            
             <div className="price-remove">
+              
+            
               <div className='cart-price'>
                 Total Price is: ₹{price}
               </div>
-              <div>
+              <div className='clear-button'>
                 <button onClick={clearcart}>clear cart</button>
               </div>
             </div>
