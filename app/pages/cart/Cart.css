@@ -9,6 +9,7 @@
     align-items: center;
     width:100%;
     margin: auto;
+   
     flex-direction: column;
 }
 
@@ -21,28 +22,36 @@
 
 .cart-card {
     width: 25rem;
+     background-color: #ffffff;
     margin: auto;
     margin-top: .5em;
     margin-bottom: .5em;
     height: 8em;
-    border: 2px solid #ddd;
+    border: 2px solid #948b8b;
     list-style-type: none;
     display: flex;
+    border-radius: 1em;
     justify-content: space-between;
+    padding:  .5em .5em .5em .5em;
 }
 
 .cart-card img {
     object-fit: contain;
-    width: 50%;
+    width: 30%;
     height: 100%;
 }
 .counter-div{
     display: flex;
     align-items: center;
+    
 }
 .counter{
-    height: 16%;
+    height: 15%;
+    display: flex;
     align-items: center;
+   
+    background-color: #ffffff;
+    justify-content: space-between;
 }
 .price-info {
     display: flex;

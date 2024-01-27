@@ -1,27 +1,39 @@
+// Cart.js
 import NoteContext from '@/app/NoteContext';
 import React, { useContext, useState, useEffect } from 'react';
-import "./cart.css"
+import "./cart.css";
 
 const Cart = () => {
   const [price, setPrice] = useState(0);
-  const { noteState, setNoteState } = useContext(NoteContext);
+  const { noteState, setNoteState, quantity, setquantity } = useContext(NoteContext);
 
   useEffect(() => {
     calculatePrice();
-  }, [noteState]);
+  }, [noteState, quantity]);
 
   const calculatePrice = () => {
     let totalPrice = 0;
     noteState.forEach((item) => {
-      totalPrice += item.price;
+      const itemQuantity = item.quantity || 1; 
+      totalPrice += item.price * itemQuantity;
     });
     setPrice(totalPrice);
   };
 
   const clearcart = () => {
     setNoteState([]);
+    setquantity([]);
     setPrice(0);
   };
+
+  const quantitychange = (itemId, change) => {
+    let updatedQuantity = [...quantity];
+    updatedQuantity[itemId] = (updatedQuantity[itemId] || 0) + change; 
+    setquantity(updatedQuantity);
+  };
+
+  console.log(quantity);
+  console.log(noteState);
 
   return (
     <>
@@ -29,23 +41,21 @@ const Cart = () => {
       <div className='cart-container'>
         {noteState && noteState.length > 0 ? (
           <>
-            <ul>
+            <div className='cart-box'>
               {noteState.map((item) => (
-                <li className='cart-card' >
+                <div className='cart-card' key={item.id}>
                   <img src={item.productImage} alt="image not found" />
                   <div className="price-info">{item.productName} - ₹{item.price}</div>
                   <div className="counter-div">
-                  <button className='counter'>+</button>
-                  <h5> 12 </h5>
-                  <button className='counter'>-</button>
+                    <button className='counter' onClick={() => quantitychange(item.id, 1)}>+</button>
+                    <h5>{quantity[item.id]}</h5>
+                    <button className='counter' onClick={() => quantitychange(item.id, -1)}>-</button>
                   </div>
-                </li>
+                </div>
               ))}
-            </ul>
-            
+            </div>
+
             <div className="price-remove">
-              
-            
               <div className='cart-price'>
                 Total Price is: ₹{price}
               </div>
