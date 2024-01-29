@@ -1,4 +1,4 @@
-// Cart.js
+
 import NoteContext from '@/app/NoteContext';
 import React, { useContext, useState, useEffect } from 'react';
 import "./cart.css";

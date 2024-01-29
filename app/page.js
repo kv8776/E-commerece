@@ -7,9 +7,10 @@ import Grocery from './pages/grocery/Grocery';
 import Fashion from './pages/fashion/Fashion';
 import Type from './components/type/Type';
 import Cart from './pages/cart/cart';
-import Index from './pages/Index';
+
 import NoteProvider from './Noteprovider'; 
 import NoteContext from './NoteContext';
+import Home from './pages/index/Home';
 
 const Page = () => {
   return (
@@ -19,7 +20,7 @@ const Page = () => {
         <Navbar />
         <Type />
         <Routes>
-          <Route path="/index"  element={<Index />} />
+          <Route path="/Home"  element={<Home />} />
           <Route path="/fashion" element={<Fashion />} />
           <Route path="/grocery" element={<Grocery />} />
           <Route path="/electronics" element={<Electronics />} />

@@ -21,12 +21,12 @@
 }
 
 .cart-card {
-    width: 25rem;
+    width: 30em;
      background-color: #ffffff;
     margin: auto;
     margin-top: .5em;
     margin-bottom: .5em;
-    height: 8em;
+   height:8em;
     border: 2px solid #948b8b;
     list-style-type: none;
     display: flex;
@@ -61,4 +61,9 @@
 }
 .clear-button{
     border-radius: 2em;
+}
+@media screen and (max-width:520px) {
+    .cart-card{
+        width:100%;
+    }
 }

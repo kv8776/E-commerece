@@ -1,4 +1,4 @@
-s
+
 import React, { useContext } from 'react';
 import "./product.css";
 import NoteContext from '@/app/NoteContext';

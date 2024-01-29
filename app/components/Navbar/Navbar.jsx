@@ -7,8 +7,9 @@ import './Navbar.css';
 import { Link } from 'react-router-dom';
 import Cart from '@/app/pages/cart/cart';
 import NoteContext from '@/app/NoteContext';
-import Index from '@/app/pages/index/Index';
+
 import Type from '../type/Type';
+import Home from '@/app/pages/index/Home';
 
 const Navbar = () => {
   const { noteState } = useContext(NoteContext);
@@ -22,7 +23,7 @@ const Navbar = () => {
         </span>
       </div>
       <div className="items">
-        <Link to="/index" className="c">Home</Link>
+        <Link to="/Home" className="c">Home</Link>
 
 
         <Link to="/type" className="c">Shop</Link>
