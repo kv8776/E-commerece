@@ -20,7 +20,8 @@ const Page = () => {
         <Navbar />
         <Type />
         <Routes>
-          <Route path="/Home"  element={<Home />} />
+          <Route  index  element={<Home />} />
+          <Route  path='/Index'  element={<Home />} />
           <Route path="/fashion" element={<Fashion />} />
           <Route path="/grocery" element={<Grocery />} />
           <Route path="/electronics" element={<Electronics />} />

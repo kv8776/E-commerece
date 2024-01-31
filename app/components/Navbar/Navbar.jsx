@@ -23,7 +23,7 @@ const Navbar = () => {
         </span>
       </div>
       <div className="items">
-        <Link to="/Home" className="c">Home</Link>
+        <Link to="/index" className="c">Home</Link>
 
 
         <Link to="/type" className="c">Shop</Link>

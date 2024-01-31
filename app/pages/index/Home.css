@@ -1,5 +1,6 @@
 .main-container{
     width: 100%;
+    margin-top: 1em;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -12,14 +13,56 @@
     height: 100%;
 }
 .image{
-    width: 50%;
-    padding: 1em 1em 1em 1em;
+    width: 20em;
+    padding: 0em 1em 1em 1em;
     height: 100%;
    }
     
-.img{
-    width:30%;
-    }
+
 .button{
-    width: 5em;
+    font-size: 0.6em;
+    margin:2em 2em 2em 2em ;
+    font-family: 'DM Sans', sans-serif;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.button:after {
+    content: "";
+    background-color: #ffe54c;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+  }
+  
+  .button:hover:after {
+    top: 0px;
+    left: 0px;
+  }
+  
+  @media (min-width: 768px) {
+    .button {
+      padding: 13px 50px 13px;
+    }
+  }
+@media screen and (max-width:600px){
+    .image{
+        display: none;
+    }
+    .text{
+        width: 100%;
+        margin-top: 5em;
+    }
 }
